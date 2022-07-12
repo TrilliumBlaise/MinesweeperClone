@@ -1,0 +1,37 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="./images/icon.svg">
+    <link rel="stylesheet" href="style.css" />
+    <script src="confetti.js" defer></script>
+    <script src="script.js" type="module"></script>
+    <!-- <script src="test.js"></script> -->
+    <title>Minesweeper Clone</title>
+  </head>
+  <body>
+    <div id="root">
+        <span class="instructions">To mark as bomb, hold SHIFT and click</span>
+      <div class="container" data-container>
+        <div class="header"><img class="icon" src="./images/icon.svg" alt=""> Minesweeper</div>
+        <div class="navbar">
+          <button class="difficulty">Difficulty</button>
+          <div class="pick-difficulty closed">
+            <button class="easy"><span class="title">Easy</span class='keyboard-shortcut'><span>CTRL + E</span></button>
+            <button class="medium"><span class="title">Medium</span class='keyboard-shortcut'><span>CTRL + M</span></button>
+            <button class="hard"><span class="title">Hard</span class='keyboard-shortcut'><span>CTRL + H</span></button>
+          </div>
+        </div>
+        <div class="display">
+            <div class="mines-left"><span class="tens-digit">0</span><span class="ones-digit">0</span></div>
+            <button class="reset"></button>
+            <div class="timer"><span class="hundreds-digit">0</span><span class="tens-digit">0</span><span class="ones-digit">0</span></div>
+        </div>
+        <div class="play-area">
+        </div>
+      </div>
+    </div>
+  </body>
+
+</html>
