@@ -96,7 +96,7 @@ function checkWin() {
     document.querySelector('.reset').style.backgroundImage = `url('./images/dead.svg')`
     playArea.style.pointerEvents = 'none'
   }
-  if (mines.filter(mine => mine.element.classList.contains('is-mine')).length === mines.length) {
+  if (mines.filter(mine => mine.element.classList.contains('is-mine')).length === mines.length || allNumberAndBlanksAreOpen()) {
     console.log('hello')
     playArea.style.pointerEvents = 'none'
     const congratsMessage = document.createElement('div')
@@ -107,6 +107,12 @@ function checkWin() {
     game.timerInterval = undefined
     startConfetti()
   }
+}
+
+function allNumberAndBlanksAreOpen() {
+  const notMines = game.board.flat().filter(t => t.mine === false)
+  console.log(notMines.every(tile => tile.status === 'open'))
+  return notMines.every(tile => tile.status === 'open')
 }
 
 setUpPlayArea()
