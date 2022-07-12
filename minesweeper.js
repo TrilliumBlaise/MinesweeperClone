@@ -2,7 +2,7 @@ const game = {
   gridSize: {
     easy: [9, 9],
     medium: [16, 16],
-    hard: [30, 16],
+    hard: [16, 30],
   },
   minesAvailable: {
     easy: 10,
