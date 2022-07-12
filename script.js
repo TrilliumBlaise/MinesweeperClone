@@ -62,6 +62,7 @@ function displayTime() {
 }
 function setUpPlayArea() {
   playArea.innerHTML = ''
+  playArea.style.pointerEvents = 'all'
   playArea.classList.add(game.mode)
   game.board = createTiles(game.mode)
   game.board.forEach(row => {
